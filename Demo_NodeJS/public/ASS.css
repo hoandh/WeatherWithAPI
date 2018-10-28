@@ -1,0 +1,26 @@
+ html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+   
+#mainNav{
+    text-align: end;
+}
+
+.Weathernow{
+    text-align: center;
+}
+.horizonal-scroll-wrapper {
+    transform-origin: right;
+}
+.weatherne ul{
+    
+        list-style-type: none;
+        text-align: center;
+      
+}
+.weatherne {
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+  } 
