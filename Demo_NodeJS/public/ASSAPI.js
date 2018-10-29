@@ -1,3 +1,44 @@
+function Search(props){
+    function onKeyPressHandle(e){
+        if(e.key == 'Enter'){
+            props.onKeyPressHandle(e.target.value);
+        }
+    }
+    return(
+        <div className = "search_city">
+           <input  onChange={inputz} onKeyPress={enterz} placeholder="Search" aria-label="Search" style={props.styleInput} type="text" />
+        </div>
+    );
+}
+class MainWeather extends React.Component {
+
+    render() {
+        var speedw = Math.floor(this.props.value.wind_spd * 3600 / 1000);
+        
+        var imgz = "https://www.weatherbit.io/static/img/icons/" + this.props.value.weather.icon + ".png";
+        
+        if (this.props.noti == "") {
+            return (
+                <div className="row mx-auto px-auto">
+                    <div className="mx-auto currentweatherz align-content-center justify-content-center">
+                        <div className="px-auto mx-auto"><h3>{this.props.city}, {this.props.country}</h3></div>
+                        <h5 className="mx-auto px-auto">{this.props.value.valid_date}</h5>
+                        <div className="mx-auto px-auto tempz">
+                            <img className="d-inline" height="70" width="70" src={imgz} />{this.props.value.temp}<sup>o</sup>C
+                            </div>
+                        <div className="mx-auto px-auto"><h3>{this.props.value.weather.description}</h3></div>
+                        <div className="mx-auto px-auto">Feel Like 26<sup>o</sup> &nbsp;&nbsp;&nbsp;&nbsp;<span> Wind {speedw} km/h</span> &nbsp;&nbsp;&nbsp;&nbsp; <span className="d-block">Visibility {Math.floor(this.props.value.vis)} km</span></div>
+                        <div className="d-block" ><div className="d-inline">Barometer {this.props.value.pres}mb</div>  &nbsp;&nbsp;&nbsp;&nbsp; <div className="d-inline">Humidity {this.props.value.rh}%</div>  &nbsp;&nbsp;&nbsp;&nbsp; <div className="d-xs-block">Dew Point {this.props.value.dewpt}<sup>o</sup></div></div>
+                    </div>
+                </div>
+            );
+        }
+        else {
+            return(<div className="row px-auto mx-auto"><h1 className="mx-auto currentweatherz align-content-center justify-content-center">{this.props.noti}</h1></div>);
+        }
+        // }
+    }
+}
 class Weather extends React.Component {
     constructor(props) {
         super(props);
