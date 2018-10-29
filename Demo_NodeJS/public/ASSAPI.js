@@ -173,7 +173,9 @@ class Weather extends React.Component {
 
                 <div className="container-fluid padding">
                     <div className="Weathernow">
-                        <div className="col-lg-2"></div>
+                        <div className="col-lg-2">
+                        
+                        </div>
                         <div className="col-lg-8">
                             <h2>{this.state.WeatherDaily.city_name}, {this.state.WeatherDaily.country_code}</h2>
                             <img src={Icons[0]} height="90px;" width="90px;" alt="weather-icon"></img>
