@@ -9,7 +9,7 @@ class Weather extends React.Component {
         })
     }
     componentDidMount = () => {
-        fetch("https://api.weatherbit.io/v2.0/forecast/daily?city=Hanoi&key=5bfc707ff7a64bf7a1ca737f8a3f47d1")
+        fetch("https://api.weatherbit.io/v2.0/forecast/daily?city=Hanoi&key=8b4069a9c85942caaa7903e24f179cf7")
             .then(result => {
                 if (result.status == 200) {
                     return result.json()
@@ -29,7 +29,7 @@ class Weather extends React.Component {
     }
     componentDidUpdate(prevProps, prevState) {
         if (this.state.CityNameSearch !== prevState.CityNameSearch) {
-            fetch("https://api.weatherbit.io/v2.0/forecast/daily?city=" + this.state.CityNameSearch + "&key=5bfc707ff7a64bf7a1ca737f8a3f47d1")
+            fetch("https://api.weatherbit.io/v2.0/forecast/daily?city=" + this.state.CityNameSearch + "&key=8b4069a9c85942caaa7903e24f179cf7")
                 .then(result => {
                     if (result.status == 200) {
                         return result.json()
