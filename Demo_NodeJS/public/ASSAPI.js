@@ -141,7 +141,8 @@ class Weather extends React.Component {
                             <p>Today is: {date.getHours()}:{date.getMinutes()} {month[date.getMonth()]} {date.getDate()}</p>
                             <div className="row">
                                 <div className="col-lg-6 col-md-4 col-sm-2">
-                                    <pre>Feel like: {AppTemp[0]}<sup>o</sup>C   Wind Speed: {WindSpeed[0]} m/s    Humidity: {Humidity[0]}%</pre>
+                                    <pre>Feel like: {AppTemp[0]}<sup>o</sup>C   Wind Speed: {WindSpeed[0]} m/s</pre>
+                                    <p>Humidity: {Humidity[0]}%</p>
                                 </div>
                             </div>
                         </div>
